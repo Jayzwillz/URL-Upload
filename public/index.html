@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload get Link</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Upload with Preview</h1>
+        <form id="uploadForm">
+            <input type="text" id="fileTitle" placeholder="Enter file title" required>
+            <label class="file-label" for="fileInput">Choose File</label>
+            <input type="file" id="fileInput" name="file" required>
+            <div id="filePreview">
+                <p id="previewText">No file selected</p>
+                <img id="previewImage" alt="Image preview" style="display: none;">
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="response"></div>
+        <div id="previousUrls"></div>
+        <button id="deleteAll" onclick="deleteAllUploads()">Delete All</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
